@@ -1,0 +1,15 @@
+  {
+    "name": "AW_Tracker",
+    "version": "1.0",
+    "description": "Log user activities on StackOverflow",
+    "manifest_version": 2,
+    "background":{
+    	"scripts":["js/jquery.js","js/background.js"],
+    	"persistent":false
+    },
+    "content_scripts":[{
+    	"matches":["https://stackoverflow.com/*"],
+    	"js":["js/jquery.js","js/myscript.js"]
+    }],
+    "permissions": ["tabs"]
+  }
