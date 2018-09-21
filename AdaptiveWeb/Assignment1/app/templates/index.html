@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hi, {{ current_user.username }}!</h1>
+    <div><p> Great day to explore <b>StackOverflow</b></p></div>
+
+    <div><p> Choosing features to track:
+A total of 5 features are tracked. They are described below:
+1)	Votes – The system keeps track if the user clicks on either ‘up-vote’ or ‘down-vote’ button on StackOverflow. An idea of this gives us if the user was either satisfied with the solution given or he disproves the solution given by another user on stackoverflow. In future, this could be developed to check if a user purposely downvotes or purposely upvotes a particular user.
+2)	Sharing answers – If the user shares an answer, then it shows that the user has liked the solution very much or found another question which can be solved from this solution. This is particularly helpful to not only keep an account of the answers applicability but also other topics that this solution could be related to.
+3)	Asking questions – A number of users might log in to stackoverflow only to ask questions. This behavior tracking is essential to know the type of user.
+4)	Searching related links – A number of links (linked and related) are displayed by stackoverflow on the right side of the screen. This tracking can help us finding similar questions as the user navigates through the set of questions.
+5)	Looking at last edits – A user could be a moderator who searches for false information or demeaning information. Such type of user would want to look for the previous versions of the users answers.
+</p></div>
+{% endblock %}
