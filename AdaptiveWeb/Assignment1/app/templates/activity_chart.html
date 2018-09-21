@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+
+{% block content %}
+<html lang="en"><head>
+    <meta charset="utf-8" />
+    <title>Chart.js </title>      <!-- import plugin script -->
+    <script src='static/Chart.min.js'></script>   </head>
+<body>
+
+<h1>{{ title }}</h1><!-- bar chart canvas element --><div><canvas id="chart" width="600" height="400"></canvas></div>
+
+<script>
+   var pieData = [
+            {% for item,label,colors in set %}
+                {
+                    value: {{item}},
+                    label: "{{label}}",
+                    color : "{{colors}}"
+                },
+                {% endfor %}
+
+
+         ];
+
+   // get bar chart canvas
+   var mychart = document.getElementById("chart").getContext("2d");
+
+   steps = 10
+   max = 10
+   // draw pie chart
+   new Chart(document.getElementById("chart").getContext("2d")).Pie(pieData);
+
+</script>
+
+<h1>{{ title2 }}</h1><!-- bar chart canvas element --><div><canvas id="chart2" width="600" height="400"></canvas></div>
+
+<script>
+   var pieData2 = [
+            {% for item,label,colors in setn %}
+                {
+                    value: {{item}},
+                    label: "{{label}}",
+                    color : "{{colors}}"
+
+                },
+                {% endfor %}
+
+
+         ];
+
+
+   // get bar chart canvas
+   var mychart2 = document.getElementById("chart2").getContext("2d");
+
+   steps = 10
+   max = 10
+   // draw pie chart
+   new Chart(document.getElementById("chart2").getContext("2d")).Pie(pieData2);
+
+</script>
+
+<h2>Inferences</h2>
+<p>
+    <h3>Inference 1</h3><!-- bar chart canvas element --><div><canvas id="chart3" width="300" height="200"></canvas></div>
+
+<script>
+   var pieData2 = [
+            {% for item,label,colors in set1 %}
+                {
+                    value: {{item}},
+                    label: "{{label}}",
+                    color : "{{colors}}"
+
+                },
+                {% endfor %}
+
+
+         ];
+
+
+   // get bar chart canvas
+   var mychart2 = document.getElementById("chart3").getContext("2d");
+
+   steps = 10
+   max = 10
+   // draw pie chart
+   new Chart(document.getElementById("chart3").getContext("2d")).Pie(pieData2);
+
+</script>
+This captures if user likes to vote and ask questions. This can be assumed to be the primary behaviour of the user
+</p>
+<h3>Inference 2</h3><!-- bar chart canvas element --><div><canvas id="chart4" width="300" height="200"></canvas></div>
+
+<script>
+   var pieData2 = [
+            {% for item,label,colors in set2 %}
+                {
+                    value: {{item}},
+                    label: "{{label}}",
+                    color : "{{colors}}"
+
+                },
+                {% endfor %}
+
+
+         ];
+
+
+   // get bar chart canvas
+   var mychart4 = document.getElementById("chart3").getContext("2d");
+
+   steps = 10
+   max = 10
+   // draw pie chart
+   new Chart(document.getElementById("chart4").getContext("2d")).Pie(pieData2);
+
+</script>
+<p>
+This captures total votes. We can check who votes more. Might be able to detect bot/spammer.
+</p>
+<p>
+    <h3>Inference 3</h3><!-- bar chart canvas element --><div><canvas id="chart5" width="300" height="200"></canvas></div>
+
+<script>
+   var pieData2 = [
+            {% for item,label,colors in set3 %}
+                {
+                    value: {{item}},
+                    label: "{{label}}",
+                    color : "{{colors}}"
+
+                },
+                {% endfor %}
+
+
+         ];
+
+
+   // get bar chart canvas
+   var mychart2 = document.getElementById("chart5").getContext("2d");
+
+   steps = 10
+   max = 10
+   // draw pie chart
+   new Chart(document.getElementById("chart5").getContext("2d")).Pie(pieData2);
+
+</script>
+We can find the time user requires for searching
+</p>
+
+<a href="{{ url_for('user', username=current_user.username) }}">Go Back</a>
+
+<h6>Some other inferences</h6>
+<p>The user variates by {{variate}}% from general trend</p>
+<p>The user might {{spammer}}</p>
+<p>A normal statistical method was used to get inferences. If the user spends 80% of this htime on voting, that could imply a potential spammer. If a user deploys similar time in searching the website then he could be a bot. A number of these features help us target who the audience is. The code is written in routes.py</p>
+</body></html>
+{% endblock %}
