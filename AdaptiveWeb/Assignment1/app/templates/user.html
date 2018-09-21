@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <table>
+        <tr valign="top">
+            <td><img src="{{ user.avatar(128) }}"></td>
+            <td>
+                <h1>User: {{ user.username }}</h1>
+                {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %}
+                {% if user.last_seen %}<p>Last seen on: {{ user.last_seen }}</p>{% endif %}
+                {% if user == current_user %}
+                <p><a href="{{ url_for('edit_profile') }}">Edit your profile</a></p>
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+    <hr>
+    Click <a href="https://stackoverflow.com/questions/tagged/java?sort=frequent&pageSize=15?&user={{ user.username }}">here</a> to go to stackoverflow Java page.
+<br>
+<br>
+Click <a href="{{url_for('chart') }}">here</a> for Interactive Social Visualization
+<br>
+<p> Displaying last 20 activities and their timestamps</p>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+    <table>
+        <tr>
+    <th>Time</th>
+    <th>Activity</th>
+  </tr>
+    {% for item in data %}
+    <tr>
+        <td>{{item[0]}}</td>
+        <td>{{item[1]}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
