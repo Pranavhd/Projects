@@ -1,0 +1,65 @@
+[(0, '0.057*"bag" + 0.032*"stuff" + 0.026*"united" + 0.026*"stop" + 0.025*"case" + 0.024*"clothing" + 0.018*"baggage"'), (1, '0.067*"bag" + 0.034*"people" + 0.033*"multitude" + 0.026*"citizenry" + 0.023*"baggage" + 0.023*"united" + 0.019*"lose"')]
+bag 1
+flight 1
+{'bag': 1, 'flight': 1}
+{0: 73, 1: 95, 2: 0}
+--- 870.7495830059052 seconds ---
+
+---------------------------------------------------------------------------
+kb = set(['bag.n.01','bag.n.04','bag.n.05','bag.n.06','baggage.n.01','baggage.n.03','wheel.n.01','steering_wheel.n.01','wheel.n.04','wheel.v.01','wheel.v.02','wheel.v.03','misplace.v.01','lose.v.05','lose.v.06','lose.v.08','suffer.v.11','material.n.01','stuff.n.02','stuff.n.03','thrust.v.02','stuff.v.03','stuff.v.01','stuff.v.06',
+'break.v.02','break.v.08','break_in.v.01','violate.v.01',
+'separate.v.08','collapse.v.01','break.v.39','break.v.41','break.v.45','break.v.49','crack.v.01','break.v.56',
+'steal.v.01','lock.n.01','lock.v.01','lock_in.v.02',
+'carry.n.01','transport.v.02','carry.v.02','hold.v.14','hold.v.11','dribble.v.03','carry.v.32','breakage.n.03','break.n.09',
+'break.n.14','break.v.02','break.v.04','break.v.05','break.v.08','break.v.43','break.v.44',
+'neglect.v.01','drop.n.09','drop.v.01','drop.v.02','sink.v.01','drop.v.08',
+'fell.v.01','spend.v.02','dangle.v.01','shed.v.01','clasp.n.02','hold.v.28','halt.v.01','apparel.n.01','dress.v.02','cargo.n.01',
+'load.v.01','case.n.05','sheath.n.02','shell.n.08','casing.n.03','case.n.19','encase.v.01','deliver.v.02','hand_over.v.01',
+'surrender.v.02','delivery.n.04','detect.v.01','recover.v.01','pocket.n.01','pouch.n.02','air_pocket.n.01',
+'cabin.n.01','carousel.n.01','clothing.n.01','claim.n.04','check.v.01','price.n.02','blast.n.01','bang.n.02','gust.n.01','blast.n.04','blast.v.01', 'smash.v.01', 'blast.v.04', 'blast.v.07','blast.v.09', 'blast.v.10','guest.n.01', 'guest.n.03', 'sit.v.01','sit_down.v.01', 'ride.v.01', 'sit.v.07', 'baby-sit.v.02', 'seat.v.01', 'sit.v.10','seat.n.01', 'seat.n.03','seat.n.04', 'seat.v.01','seat.v.02','seat.v.04','seat.v.05','seat.v.06','seat.v.07','vent.n.01','release.n.09','vent.v.01','vent.v.02','television_receiver.n.01','cancel.v.01','cancel.v.03','delete.v.01','cancel.v.05','off.a.03','flight.n.01','flight.n.02','escape.n.01','trajectory.n.01','flight.n.09','business.n.01','commercial_enterprise.n.02','occupation.n.01','clientele.n.01','direct.v.01','target.v.01','direct.v.04','lead.v.01','send.v.01','aim.v.01','conduct.v.02','direct.v.09','steer.v.01','stop.n.03','people.n.01','citizenry.n.01','people.n.03','multitude.n.03','peep.v.01','peep.v.02','peep.v.04','peep.v.05','airplane.n.01','plane.v.02','stop.n.01','stop.n.02','stop.n.03','arrest.n.02','stop.n.05','stop_consonant.n.01','stop.v.01','discontinue.v.01','stop.v.03','stop.v.04','stop.v.05','intercept.v.01','end.v.01','barricade.v.01','hold_on.v.02','weather.n.01','weather.v.04','premium.n.01','premium.n.04','fly.v.01','fly.v.02','fly.v.03','fly.v.04','fly.v.05','fly.v.08','fly.v.09','fly.v.10','fly.v.12','across.r.01','across.r.02','state.n.04','country.n.02','nation.n.02','country.n.04','area.n.01','flee.v.01','vanish.v.05','ascent.n.01','upgrade.n.03','upgrade.v.01','promote.v.02','upgrade.v.04','upgrade.v.05','offer.v.01','volunteer.v.02','offer.v.04','offer.v.06','offer.v.07','put_up.v.02','extend.v.04','wait.n.02','wait.v.01','expect.v.03','wait.v.04','desk.n.01','airport.n.01','landing.n.03','landing.n.04','land.v.02','land.v.04','telling.n.02','lean_back.v.01','recline.v.02','recumb.v.01','web_site.n.01','drink.n.01','drink.n.02','beverage.n.01','swallow.n.02','drink.v.01','drink.v.02','drink.v.05','mechanical.a.02','reschedule.v.01','passenger.n.01','seating.n.01','seat.v.01','seat.v.02','seat.v.04','seat.v.05','seat.v.07','row.n.01','quarrel.n.01','choose.v.01','turbulence.n.01','turbulence.n.02'])
+
+
+
+[(0, '0.103*"bag" + 0.043*"baggage" + 0.039*"case" + 0.036*"stuff" + 0.024*"united" + 0.023*"clothing" + 0.018*"luggage"'), (1, '0.037*"stop" + 0.034*"citizenry" + 0.032*"multitude" + 0.030*"people" + 0.028*"bag" + 0.025*"united" + 0.021*"flight"')]
+bag 0
+flight 1
+{'bag': 0, 'flight': 1}
+{0: 77, 1: 91, 2: 0}
+--- 827.3185591697693 seconds ---
+
+-------------------------------------------------------------------------------
+
+[(0, '0.202*"bag" + 0.115*"baggage" + 0.026*"united" + 0.018*"luggage" + 0.015*"usairways" + 0.008*"lost" + 0.007*"southwestair"'), (1, '0.099*"support" + 0.038*"service" + 0.037*"bag" + 0.033*"call" + 0.025*"cry" + 0.024*"booking" + 0.023*"united"')]
+bag 0
+flight 1
+{'bag': 0, 'flight': 1}
+{0: 90, 1: 78, 2: 0}
+--- 582.5416383743286 seconds ---
+
+
+-----------------------------------------------------------------
+'bag.n.01','bag.n.04','bag.n.05','bag.n.06','baggage.n.01','baggage.n.03'
+
+,'staff.n.01', 'lost.a.01','dress.v.02','dress.v.10','dress.v.02','break.v.02','clothing.n.01','apparel.n.01','staff.v.02','seat.n.01','seat.v.01','seat.v.05','call.n.01','support.n.02','support.n.01','support.n.11','support.v.01','booking.n.02','reservation.n.06','avail.n.01'
+
+[(0, '0.170*"bag" + 0.083*"baggage" + 0.055*"clothing" + 0.025*"united" + 0.020*"apparel" + 0.018*"luggage" + 0.016*"usairways"'), (1, '0.106*"support" + 0.066*"bag" + 0.032*"booking" + 0.029*"lost" + 0.024*"united" + 0.021*"avail" + 0.018*"flight"')]
+bag 0
+flight 1
+{'bag': 0, 'flight': 1}
+{0: 91, 1: 77, 2: 0}
+--- 566.4994168281555 seconds ---
+
+-----------------------------------------------------------------
+set(['bag.n.01','bag.n.04','bag.n.05','bag.n.06','baggage.n.01','baggage.n.03','staff.n.01', 'lost.a.01','dress.v.02','dress.v.10','dress.v.02','break.v.02','clothing.n.01','apparel.n.01','staff.v.02','seat.n.01','seat.v.01','seat.v.05','call.n.01','support.n.02','support.n.01','support.n.11','support.v.01','booking.n.02','reservation.n.06','avail.n.01'])
+
+[(0, '0.140*"support" + 0.056*"bag" + 0.045*"booking" + 0.038*"avail" + 0.037*"staff" + 0.034*"flight" + 0.030*"clothing"'), (1, '0.156*"bag" + 0.096*"baggage" + 0.044*"clothing" + 0.043*"apparel" + 0.032*"call" + 0.028*"support" + 0.025*"seat"')]
+bag 1
+flight 0
+{'bag': 1, 'flight': 0}
+{0: 69, 1: 99, 2: 0} = 168 
+655
+{0: 482, 1: 173, 2: 0} 
+--- 1077.0177958011627 seconds ---
+
+581
+-----------------------------------------------------------------

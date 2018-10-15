@@ -1,0 +1,15 @@
+'food.n.01','food.n.02','food.n.03','plate.n.04','plate.n.05','plate.n.08','beverage.n.01','drink.n.01','drink.n.02','swallow.n.02','drink.v.01','drink.v.02','drink.v.05','meal.n.01','meal.n.02','meal.n.03'
+
+'bag.n.01','bag.n.04','bag.n.05','bag.n.06','baggage.n.01','baggage.n.03'
+
+,'staff.n.01', 'staff.v.02','crew.n.01','gang.n.03','crew.v.01','seat.n.01','seat.v.01','seat.v.05','call.n.01','cry.n.01','call.n.04','call.n.09','call.v.03','call.v.05','call.v.03','support.n.02','support.n.01','support.n.11','support.v.01','booking.n.02','reservation.n.06','service.n.15','avail.n.01','service.n.04','service.n.02'
+
+1 - 44626
+
+
+luggage,dress,suitcase,stuff,broken, stolen,lost 
+
+
+'bag.n.01','bag.n.04','bag.n.05','bag.n.06','baggage.n.01','baggage.n.03'
+
+,'staff.n.01', 'lost.a.01','dress.v.02','dress.v.10','dress.v.02','break.v.02','clothing.n.01','apparel.n.01','staff.v.02','seat.n.01','seat.v.01','seat.v.05','call.n.01','support.n.02','support.n.01','support.n.11','support.v.01','booking.n.02','reservation.n.06','avail.n.01'
