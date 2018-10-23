@@ -1,0 +1,74 @@
+Cloning is not automatically available to classes. There is some help though, as all Java objects inherit the protected Object clone() method. This base method would allocate the memory and do the bit by bit copying of the object's states.  
+ You may ask why we need this clone method. Can't we create a constructor, pass in the same object and do the copying variable by variable? An example would be (note that accessing the private memberVar variable of obj is legal as this is in the same class):
+ 
+
+
+
+Code listing 4.14: MyObject.java
+1 public class MyObject {
+2    private int memberVar;
+3 ...
+4    MyObject(MyObject obj) {
+5       this.memberVar = obj.memberVar;
+6     ...
+7    }
+8 ...
+9 }
+
+ This method works but object creation with the new keyword is time-consuming. The clone() method copies the whole object's memory in one operation and this is much faster than using the new keyword and copying each variable so if you need to create lots of objects with the same type, performance will be better if you create one object and clone new ones from it. See below a factory method that will return a new object using cloning.
+ 
+
+
+
+Code section 4.31: Object cloning.
+ 1 HashTable cacheTemplate = new HashTable();
+ 2 ...
+ 3 /** Clone Customer object for performance reason */
+ 4 public Customer createCustomerObject() {
+ 5    // See if a template object exists in our cache
+ 6    Customer template = cacheTemplate.get("Customer");
+ 7    if (template == null) {
+ 8       // Create template
+ 9       template = new Customer();
+10       cacheTemplate.put("Customer", template);
+11    }
+12    return template.clone();
+13 }
+
+ Now, let's see how to make the Customer object cloneable.
+ 
+
+
+
+Code listing 4.15: Customer.java
+1 public class Customer implements Cloneable {
+2  ...
+3     public Object clone() throws CloneNotSupportedException {
+4        Object obj = super.clone();
+5 
+6        return obj;
+7     }
+8 }
+
+ In the code listing 4.15 we used cloning for speed up object creation. Another use of cloning could be to take a snapshot of an object that can change in time. Let's say we want to store Customer objects in a collection, but we want to disassociate them from the 'live' objects.  So before adding the object, we clone them, so if the original object changes from that point forward, the added object won't.  Also let's say that the Customer object has a reference to an Activity object that contains the customer activities.  Now we are facing a problem, it is not enough to clone the Customer object, we also need to clone the referenced objects.  The solution:
+ 
+
+
+
+Code listing 4.16: Customer.java
+ 1 public class Customer implements Cloneable {
+ 2   Activity activity;
+ 3   ...
+ 4     public Customer clone() throws CloneNotSupportedException {
+ 5       Customer clonedCustomer = (Customer) super.clone();
+ 6 
+ 7       // Clone the object referenced objects
+ 8       if (activity != null) {
+ 9          clonedCustomer.setActivity((Activity) activity.clone());
+10       }
+11       return clonedCustomer;
+12    }
+13 }
+
+ Note that only mutable objects need to be cloned. References to unchangeable objects such as a String can be used in the cloned object without worry.
+ 

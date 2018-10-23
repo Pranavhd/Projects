@@ -1,0 +1,16 @@
+When an object is sent through a network, the object needs to be re-created at the receiving host.
+ Object Serialization 
+The term Object Serialization refers to the act of converting the object to a byte stream. The byte stream can be stored on the file system or can be sent through a network.
+At a later time the object can be re-created from that stream of bytes. The only requirement is that the same class has to be available both times, when the object is serialized and also when the object is re-created. If that happens on different servers, then the same class must be available on both servers.  Same class means that exactly the same version of the class must be available, otherwise the object won't be able to be re-created. This is a maintenance problem for those applications where java serialization is used to make objects persistent or to sent the object through the network.
+When a class is modified, there could be a problem re-creating those objects that were serialized using an earlier version of the class. Java has built-in support for serialization, using the Serializable interface; however, a class must first implement the Serializable interface.
+ By default, a class will have all of its fields serialized when converted into a data stream (with transient fields being skipped).  If additional handling is required beyond the default of writing all fields, you need to provide an implementation for the following three methods:
+ private void writeObject(java.io.ObjectOutputStream out) throws IOException; private void readObject(java.io.ObjectInputStream in) throws IOException, ClassNotFoundException; private void readObjectNoData() throws ObjectStreamException; If the object needs to write or provide a replacement object during serialization, it needs to implement the following two methods, with any access specifier:
+ Object writeReplace() throws ObjectStreamException; Object readResolve() throws ObjectStreamException; Normally, a minor change to the class can cause the serialization to fail.  You can still allow the class to be loaded by defining the serialization version id:
+ 
+
+
+
+Code section 4.32: Serialization version id.
+1 private static final long serialVersionUID = 42L;
+
+ 
